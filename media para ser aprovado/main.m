@@ -1,20 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main (void)
+int main(void)
 {
     int nota;
     
-    printf("Digite a sua nota: ");
-    scanf("%d", &nota);
-    
-    if(nota >= 6){
-        printf("Aprovado");
+    do{
+        printf("Digite a sua nota: ");
+        scanf("%d", &nota);
+        
+        if (nota < 6){
+            printf("Aluno em recuperacao.\n\n");
+        }
+        else{
+            printf("Aluno aprovado!\n\n");
+            break;
+        }
     }
-    else{
-        printf("Reprovado");
-    }
-    
-    printf("\n\n");
+    while (1);
     
     return 0;
 }
